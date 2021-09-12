@@ -1,0 +1,98 @@
+<!doctype html>
+<title>CSS postions</title>
+<head>
+    
+    <style>
+        body{
+             background-image:url(Milk.jpg);
+             /*background-size: cover;
+             background-attachment: fixed;*/
+        }
+        .box1{
+            display: inline-block;
+            background:rgb(170, 227, 245);
+            position: relative;
+            height: 40px;
+            width: 20%;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 20px;
+
+        }
+        .box2{
+            display: inline-block;
+            background: rgb(170, 227, 245);
+            position: relative;
+            border-color: black;
+            left: 700px;
+            height: 40px;
+            width: 20%;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 20px;
+            
+
+
+        }
+        #click1{
+            background-color: black;
+            border-radius: 20px;
+            border-color:white;
+            position: relative;
+            top: 20px;
+            left: 180px;
+            padding: 20px;
+            color: white;
+            
+            
+        }
+        #click2{
+            background-color: black;
+            border-radius: 20px;
+            border-color:white;
+            position: relative;
+            top: 20px;
+            left: 150px;
+            padding: 20px 40px 20px 40px;
+            color: white;
+            
+        }
+        #about{
+            display: inline-block;
+            background-color: black;
+            border-radius: 20px;
+            border-color:white;
+            position: relative;
+            top: -20px;
+            right: 100px;
+            padding: 20px 40px 20px 40px;
+            color: white;
+        
+
+        }
+    </style>
+    <script>
+        function myfunction()
+        {
+            window.location ="about.html"
+        }
+    </script>
+
+</head>
+<body>
+    
+        <div class="box1">
+            Hey New to Dairyform? you need an account?!
+            <button id="click1">Create Account</button>
+        </div>
+        <div class="box2">
+                 We are here to bring all milk products to your home!
+                 <button id="click2">Login</button>
+                </div>
+                <button id="about"  onclick="return myfunction()">About Us</button>
+
+        
+    </div>
+      
+    
+</body>

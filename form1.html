@@ -1,0 +1,176 @@
+<html>
+    <title>Form1</title>
+    <head>
+        <style>
+            .wrapper{
+                position: absolute;
+                left: 500px;
+                top: 50px;
+                padding: 100px;
+                background-color: rgb(109, 182, 192);
+            }
+            .box{
+                border-radius: 5px;
+                padding: 5px;
+            }
+            #center{
+                position: relative;
+                bottom: 20px;
+            }
+            </style>
+        
+        <script type="text/javascript">
+        function validate()
+        {
+            
+            var firstname =document.getElementById("firstname").value;
+            
+            var lastname =document.getElementById("lastname").value
+            
+            var address =document.getElementById("address").value
+            
+            var phonenumber =document.getElementById("phonenumber").value;
+            
+            
+            //var phindex =document.getElementById("phonenumber").value.index;
+
+            var gender = document.getElementById("gender").checked;
+             
+            var fgender = document.getElementById("fgender").checked;
+
+            var playing = document.getElementById("playing").checked;
+
+            var swimming = document.getElementById("swimming").checked;
+
+            var riding = document.getElementById("riding").checked;
+
+            var reading = document.getElementById("reading").checked;
+
+            var city = document.getElementById("city").value;
+
+            var email = document.getElementById("email").value;
+            
+            var pattern =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            
+            var pattern1 = /[0-9]{5,15}/;
+
+            if(firstname =='' || firstname == null)
+            {
+                alert('Please, Enter Your First NAme');
+                return false;
+            }
+            
+            else if(lastname=='' || lastname == null)
+            {
+                alert('Please, Enter Your Last NAme');
+                return false;
+            }
+            else if(address=='' || address == null)
+            {
+                alert('Please, Enter Your address');
+                return false;
+            }
+            else if(phonenumber=='' || phonenumber == null)
+            { 
+                alert('Please, Enter Your phone number');
+                return false;
+                
+                if(phonenumber.match(pattern1))
+            {
+              return true;
+            }
+            else{
+                alert("please enter valid phone number")
+                return false;
+            } 
+            }
+            
+
+            else if((gender==false || gender == null || gender == undefined) && (fgender==false || fgender == null || fgender == undefined)  )
+            {
+                alert('Please select anyone one gender');
+                return false;
+            }
+            else if((playing==false || playing == null || playing == undefined) && (swimming==false || swimming == null || swimming == undefined) && (riding==false || riding == null || riding == undefined) && (reading==false || reading == null || reading == undefined))
+            {
+                alert('please select any one hobbies');
+                return false;
+            }
+            else if(reading=="" && riding=="" && swimming=="" && playing=="")
+            {
+                alert('Please select any one hobbie');
+                return false;
+            }
+            
+            else if(city=="select")
+            {
+                alert('Please select any one city');
+                return false;
+            }
+            else if(email=="" || email==null)
+            {
+                alert('Please enter email');
+                return false;
+            }
+            else if(email.match(pattern))
+            {
+                return true;
+            }
+            else
+            {
+                alert('Please enter valid email')
+                return false;
+            }
+            
+            /* else if(phonenumber.match(pattern1))
+            {
+              return true;
+            }
+            else{
+                alert("please enter valid phone number")
+                return false;
+            } */
+            
+            
+        }     
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+        <form onsubmit="return validate()" action="Dairyform.html">
+            <label >First Name :</label>
+            <input class="box" id="firstname" placeholder="Firstname" type="text" ></input>
+            <br><br>
+            <label >Last Name :</label>
+            <input class="box" id="lastname" placeholder="Lastname" type="text" ></input>
+            <br><br>
+            <label id = "center" >Address &nbsp; &nbsp; :</label>
+            <textarea class="box" id="address" placeholder="Address" type="text" ></textarea>
+            <br><br>
+            <label >Ph Num &nbsp; &nbsp; :</label>
+            <input  class="box" id="phonenumber" placeholder="Phone No" type="number"></input>
+            <br><br> 
+             <label  >Gender  &nbsp; &nbsp; &nbsp;:</label>
+            <input  class="box" id="gender"  type="radio" value="gender" name="gender"/>Male
+            <input  class="box" type="radio" id="fgender" value="gender" name="gender"/>Female
+            <br><br>
+            <label id="hobbies"  required>Hobbies &nbsp; &nbsp; :</label>
+            <input class="box" name="hobbies" class="hobbies" type="checkbox" id="playing"<li>Playing</li></input>
+            <input class="box" name="hobbies" class="hobbies" type="checkbox" id="swimming"<li>Swimming</li></input>
+            <input class="box" name="hobbies" class="hobbies" type="checkbox" id="riding"<li>Riding</li></input>
+            <input class="box" name="hobbies" class="hobbies" type="checkbox" id="reading"<li>Reading</li></input><br><br>
+            <label >Select City:</label>
+            <select class="box" id="city" name="city"  placeholder="Select &nbsp; &nbsp; &nbsp; &nbsp;  " type="input" required>Country :
+                <option class="box" value="select">select</option>
+                <option class="box" id="kakinada" class="city" value="Kakinada">Kakinada</option>
+                <option class="box" id="Vizag" class="city" value="Vizag">Vizag</option>
+                </select><br><br>
+                <label >Email Id &nbsp; &nbsp;:</label>
+                <input class="box" name="email"class="box" id="email" placeholder="Enter Email" type="text"></input>
+            <br><br>
+                <button style="background-color: rgb(233, 142, 99);" type="submit" >submit</button>
+
+        </form>
+        </div>
+    </body>
+</html>

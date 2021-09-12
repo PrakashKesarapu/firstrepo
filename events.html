@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>events</title>
+<script type="text/javascript">
+window.onload = function()
+{
+    document.getElementById("text").addEventListener("keydown",keydown);
+    document.getElementById("text").addEventListener("keyup",keyup);
+    document.getElementById("text").addEventListener("keypress",keypress)
+    /*var text =document.getElementById("text");
+    text.addEventListener("keypress", function(){
+        document.getElementById("press").innerHTML=text.value;
+
+    })*/
+}
+function keydown()
+{
+document.getElementById("down").style.backgroundColor= "red";
+document.getElementById("downval").innerHTML= "down pressed";
+document.getElementById("up").style.backgroundColor= "white";
+document.getElementById("press").style.backgroundColor= "white";
+}
+function keyup()
+{
+document.getElementById("up").style.backgroundColor= "blue";
+document.getElementById("upval").innerHTML= "up realesed";
+document.getElementById("down").style.backgroundColor= "white";
+document.getElementById("press").style.backgroundColor= "white";
+
+}
+function keypress()
+{
+    document.getElementById("press").style.backgroundColor= "green";
+    document.getElementById("up").style.backgroundColor= "white";
+    document.getElementById("pressval").innerHTML= "pressed";
+    document.getElementById("down").style.backgroundColor= "white";
+
+}
+    
+</script>
+</head>
+<body>
+<label>Enter Input:</label>
+<input id="text" type="text"></input>
+<table border="1px">
+<col width="100">
+<col width="200">
+<col width="100">
+<tr><th>Events</th><th>Action</th><th>Value</th></tr>
+<tr><td>Keydown</td><td id="down"></td><td id="downval"></td></tr>
+<tr><td>Keyup</td><td id="up"></td><td id="upval"></td></tr>
+<tr><td>Keypress</td><td id="press"></td><td id="pressval"></td></tr>
+
+</table>
+</body>
+</html>

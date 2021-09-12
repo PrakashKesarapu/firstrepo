@@ -1,0 +1,93 @@
+<html>
+<title>Form validations</title>
+<head>
+    <script type="text/javascript">
+        function validate(){
+            var firstname = document.getElementById("firstname").value;
+        }
+            if(firstname == null || firstname=='')
+            {
+              alert('Please enter first name');
+              return false;
+            }
+            else if(lastname=="null"||lastname==""){
+                alert('Please enter last name');
+                return false;
+            }
+            else if(phonenumber=="null"){
+                alert('Phone no must be 5 to 15 digits');
+                return false;
+        }
+            else if(gender=="null"){
+                alert('please select any one option');
+                return false;
+        }
+        else if(hobbies=="null"){
+                alert('please select atleast one option');
+                return false;
+        }
+        else if(city=="null"){
+                alert('please select your city');
+                return false;
+        }
+        else if(email=="null"){
+                alert('please enter valid email');
+                return false;
+        } 
+
+        
+    </script>
+<style>
+    .wrapper{
+        position: absolute;
+        left: 500px;
+        top: 50px;
+        padding: 100px;
+        background-color: darkorange;
+    }
+    .box{
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+</style>
+</head>
+<body>
+    <form onsubmit="return validate()" method="POST" action="Dairyform.html"></form>
+    <div class="wrapper" >
+    <h2 style="text-align:justify;">Contact Form </h2>
+    
+    <label >First Name :</label>
+    <input class="box" name="firstname" id="firstname" placeholder="firstname" type="text" ></input><br><br>
+    <label >Last Name  :</label>
+    <input class="box" name="lastname" id="lastname" placeholder="lastname" type="text"></input><br><br>
+    <label >Address &nbsp; &nbsp;   :</label>
+    <input class="box" name="address" id="address" placeholder="address" type="text"></input><br><br> 
+    <label >Ph Number:</label>
+    <input class="box" name="phonenumber" id="phonenumber" placeholder="Phone Number" type="number" required pattern="[0-9]{5,15}"></input><br><br>
+    <label id="gender" >Gender &nbsp; &nbsp; &nbsp;:</label>
+    <input  id="Male" name="gender" type="radio"/>Male
+    <input  name="gender"type="radio" id="Female"/>Female
+    <br><br>
+    <label  required>Hobbies &nbsp; &nbsp; :</label>
+    <input  class="hobbies" type="checkbox"<li>Playing</li></input>
+    <input class="hobbies" type="checkbox"<li>Swimming</li></input>
+    <input  class="hobbies" type="checkbox"<li>Riding</li></input>
+    <input  class="hobbies" type="checkbox"<li>Reading</li></input><br><br>
+    <label >Select City:</label>
+    <select  name="city" class="box" placeholder="Select &nbsp; &nbsp; &nbsp; &nbsp;  " type="input" required>Country :
+    <option  id="select" value="Select">select</option>
+    <option class="city" value="Kakinada">Kakinada</option>
+    <option class="city" value="Vizag">Vizag</option>
+    <option class="city" value="Guntur">Guntur</option>
+    <option class="city" value="Ongole">Ongole</option>
+    </select><br><br>
+    <label class="box">Email &nbsp; &nbsp;&nbsp; &nbsp;:</label>
+    <input name="email"class="box" id="email" placeholder="Enter Email" type="text" required></input><br><br>
+    <br><br>
+    <button type="submit">Submit </button>
+</form>
+    
+</div>
+</body>
+</html>

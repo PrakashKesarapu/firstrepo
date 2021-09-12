@@ -1,0 +1,47 @@
+<!doctype html>
+<title>CSS Template 2</title>
+<head>
+<style>
+    body{
+        display: grid;
+        grid-template-areas:
+        "nav header"
+        "nav article"
+        "nav ads" 
+        "nav footer";
+        grid-template-rows:80px 1fr 70px 70px;
+        grid-template-columns: 20% 1fr;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        height: 100vh;
+        margin: 0;
+
+    }
+  header, footer, article, nav, div {
+  padding: 1.2em;
+  background: rgb(240, 129, 190);
+  }
+#pageHeader {
+  grid-area: header;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#article { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#Ads { 
+  grid-area: ads; 
+  } 
+</style>
+</head>
+<body>
+    <header id="pageHeader">Haeder</header>
+    <article id="article">Article</article>
+    <nav id="mainNav">Nav</nav>
+    <div id="Ads">Ads</div>
+    <footer id="pageFooter">Footer</footer>
+</body>

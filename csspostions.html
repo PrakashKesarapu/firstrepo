@@ -1,0 +1,45 @@
+<!doctype html>
+<title>CSS postions</title>
+<head>
+<style>
+    /*Relative position*/
+    .container{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: rgb(79, 82, 74);
+         
+    }
+.box1{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(105, 105, 163);
+
+}
+
+    .box2{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(20, 145, 184);
+    position: relative;
+    left: 100px;
+}
+.box3{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(128, 241, 76);
+    position: relative;
+    left: 200px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+    <div class="box1">Box1</div>
+    <div class="box2">Box2</div>
+    <div class="box3">Box3</div>
+    </div>
+</body>
