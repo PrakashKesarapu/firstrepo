@@ -6,7 +6,7 @@ var person ={
     address :"kakinda"
 }
 
-//for(i=0;i<Object.keys(person).length;i++)
-//{
-console.log(Object.values(person))
-//}
+//for(n)
+{
+console.log(person)
+}
